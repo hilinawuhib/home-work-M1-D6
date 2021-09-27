@@ -133,12 +133,11 @@ console.log(isThisAnEmail("hilinawuhib@gmai"))
 /* EXERCISE 7
    Write a function called whatDayIsIt that should return the current day of the week.
 */
-//  function whatDayIsIt() {
-//    let days = ('Sunday',"Monday",'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'),
-//    return days[(new Date()).getDay()]
-//  }
-//   console.log(whatDayIsIt())
-    
+function whatDayIsIt(){
+    let weekdays = [ "Sunday", "Monday", "Tueday","Wednesday", "Thursday", "Fridays", "Saturday"]
+    return weekdays[(new Date()).getDay()]
+}
+    console.log(whatDayIsIt())
    
     
 /* EXERCISE 8
@@ -159,15 +158,15 @@ console.log(isThisAnEmail("hilinawuhib@gmai"))
 }
 
 for (let i = 0; i < num; i ++){
-    let diceRoll = dice()
-    result.sum += diceRoll
-    result.values.push(diceRoll)
+    let rolls = dice()
+    result.sum += rolls
+    result.values.push(rolls)
 }
 
 return result
  }
 
-console.log(rollTheDices)
+console.log(rollTheDices(2))
 
 
     
@@ -186,12 +185,12 @@ console.log(howManyDays(new Date(2021, 9, 27)))
 */
 function isTodayMyBirthday(date) {
     let today = new Date();
-    let birthDate = new Date(12,08,1997);
+    let birthDate = new Date(1997,09,27);
     return (today.getDay() === birthDate.getDay() && today.getMonth() === birthDate.getMonth());
     
 
 }
-console.log(isTodayMyBirthday(12,08,1997))
+console.log(isTodayMyBirthday(1997,09,27))
 
 
 
