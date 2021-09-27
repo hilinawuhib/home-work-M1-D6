@@ -418,17 +418,18 @@ console.log(sumAllTheYears(movies))
 /* EXERCISE 18
     Write a function called searchByTitle which receives a string as a parameter and returns all the movies in the provided movies array which contain that string in the title.
 */
-function searchByTitle(str) {
-        let result=[]
-        for (i=0; i<movies.length; i++){
-            let string=movies[i].Title;
-        }
-            if (str.includes(string)){
-                result.push(movies[i])
+function searchByTitle(string) {
+        let searchedResult=[]
+        for (let i=0; i<movies.length; i++){
+            let movie = movies[i].Title;
+        
+            if (movie.includes(string)){
+            searchedResult.push(movies[i])
             }
-            return result
+        }return searchedResult
         
     }
+    console.log(searchByTitle("Avengers"))
     
     
     
@@ -465,6 +466,7 @@ function removeIndex(num) {
     let result=[]
     for ( let i=0;i<movies.length;i++){
         if (num===i)
+     
            
 
         result.push(movies[i])
